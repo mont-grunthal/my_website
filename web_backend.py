@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, Response
 
 
 # In[ ]:
@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("home.html", content = "testing")
+    return render_template("home.html")
 
 @app.route("/mixture")
 def mixture():
