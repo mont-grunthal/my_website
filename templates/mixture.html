@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Diffusion Analysis{% endblock %}
 
+{% block content %}
 <html>
-  <head>
-    <Title>Analysis of Diffusion</Title>
-  </head>
-  <body>
-    <iframe src = "{{url_for('static', filename = 'Analysis_of_diffusion.pdf')}}">
-      </iframe>
- </body>
- </html>
+<h1>Analysis of Diffusion</h1>
+<iframe src = "{{url_for('static', filename = 'Analysis_of_diffusion.pdf')}}"
+width="600" height="600">
+</iframe>
+</html>
+{% endblock %}
