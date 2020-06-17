@@ -2,8 +2,27 @@
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
-<h1>Home</h1>
-<body> Sorry I don't have more to put in the home section.
-  I really don't like writing about myself.
+<html>
+<h1 style="text-align:center">Home</h1>
+<body> Hello to any and all who see this site. At present, there is
+  little rational governing what I put on this site. I plan to add more personal
+  and academic content in the future. Hopefully I can also learn some graphic
+  design skills to improve the look. But I wouldn't hold out hope for me gaining
+  artistic vision. Until that then, enjoy a picture of my cat to liven up this
+  space.
 </body>
+<br>
+<br>
+<br>
+<style>
+img {
+ display: flex;
+ margin-left: auto;
+ margin-right: auto;
+ width: 75%;
+}
+</style>
+<h6 style="text-align:center"> A picture of my cat, Pepper. As promised. </h6>
+<image src = "{{url_for('static', filename = 'images/cat.PNG')}}">
+</html>
 {% endblock %}

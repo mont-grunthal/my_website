@@ -24,6 +24,10 @@ def mixture():
 @app.route("/rocks")
 def rocks():
     return render_template("rock_climbing.html")
+
+@app.route("/resume")
+def resume():
+    return render_template("resume.html")
 # In[ ]:
 
 

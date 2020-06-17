@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} Resume {% endblock %}
+{% block content %}
+<html>
+<h1 style="text-align:center">Resume</h1>
+<iframe src = "{{url_for('static', filename = 'Resume.pdf')}}"
+width="600" height="600">
+</iframe>
+</html>
+{% endblock %}
