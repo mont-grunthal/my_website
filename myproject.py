@@ -1,16 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 from flask import Flask, redirect, url_for, render_template
 
-
-# In[ ]:
-
-
 app = Flask(__name__)
+
 
 @app.route("/")
 @app.route("/home")
@@ -28,11 +19,7 @@ def rocks():
 @app.route("/resume")
 def resume():
     return render_template("resume.html")
-# In[ ]:
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
-
-
-# In[ ]:
+    app.run(host = '0.0.0.0')
