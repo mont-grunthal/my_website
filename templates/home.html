@@ -16,13 +16,15 @@
 <br>
 <style>
 img {
- display: flex;
+ display: block;
  margin-left: auto;
  margin-right: auto;
- width: 75%;
+ width: 55%;
+ height: 80%;
+ border: 3px solid black
 }
 </style>
 <h6 style="text-align:center"> A picture of my cat, Pepper. As promised. </h6>
-<image src = "{{url_for('static', filename = 'images/cat.PNG')}}">
+<image src = "{{url_for('static', filename = 'images/cat.JPG')}}">
 </html>
 {% endblock %}
