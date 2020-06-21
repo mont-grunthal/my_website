@@ -3,28 +3,49 @@
 
 {% block content %}
 <html>
-<h1 style="text-align:center">Home</h1>
-<body> Hello to any and all who see this site. At present, there is
-  little rational governing what I put on this site. I plan to add more personal
-  and academic content in the future. Hopefully I can also learn some graphic
-  design skills to improve the look. But I wouldn't hold out hope for me gaining
-  artistic vision. Until that then, enjoy a picture of my cat to liven up this
-  space.
-</body>
-<br>
-<br>
-<br>
 <style>
 img {
- display: block;
- margin-left: auto;
- margin-right: auto;
- width: 55%;
- height: 80%;
+ width: 40%;
+ height: 100%;
  border: 3px solid black
 }
+
 </style>
-<h6 style="text-align:center"> A picture of my cat, Pepper. As promised. </h6>
-<image src = "{{url_for('static', filename = 'images/cat.JPG')}}">
+<img src = "{{url_for('static', filename = 'images/cat.JPG')}}"
+style = "float:left" />
+<h1 style="text-align:center">Biogrphy</h1>
+<p>
+  My name is Mont Grunthal. I am a computational science student at Florida State University.
+  This program has furnished me with a knowledge of numerical analysis, statistics,
+  and their applications to real world problems. As a result of my education and
+  exposure to different research projects (one of which is available on this site),
+  I have discovered a passion for data science which I intend to pursue with a master’s degree.
+  In my free time I enjoy rock climbing and any other activity which takes me into cold climates.
+</p>
+<br>
+<br>
+<h1 style="text-align:center">About the website.</h1>
+<p>
+  The backend of this site was built using flask. Flask is an open source
+  python library that is both free and easy to learn. Https support was provided
+  by certbot, which is also free, transparent and easy to use. The website is served
+  by a linux server hosted by linode. Additional content both personal and academic
+  will be added in the future. Hopefully I can also learn some graphic design
+  skills to improve the look of this site. However, I am not holding out hope that
+  I'll gain artistic vision at this point in my life. Instead, please enjoy a
+  picture of my cat.
+</p>
+<br>
+<br>
+<h1 style="text-align:center"> Mont Grunthal Sr. </h1>
+<p>
+  If you are here looking for a real estate broker,
+  you're probably looking for Mont Grunthal Sr.
+  Who, despite having the abilty for decades,
+  has neglected to buy the domain montgrunthal before
+  his son, Mont Grunthal. I"m only including this section because
+  if find that fact so deeply funny that I feel a bit guilty.
+  He can be conacted at montgrunthal@gmail.com.
+</p>
 </html>
 {% endblock %}
