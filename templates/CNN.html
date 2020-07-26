@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head>
+  <h1>Here Are Your Cat Images</h1>
+</head>
+<br>
+<br>
+<style>
+img {
+ display: flex;
+ margin-left: auto;
+ margin-right: auto;
+ width: 60%;
+ height: 75%;
+ border: 3px solid black
+}
+</style>
+{% for img in cat_path %}
+<image src = "static\{{img}}" alt = "{{img}}">
+{% endfor %}
+</html>
+{% endblock %}

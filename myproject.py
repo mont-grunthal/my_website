@@ -1,6 +1,8 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
+import crawler
 
 app = Flask(__name__)
+
 
 
 @app.route("/")
@@ -20,6 +22,18 @@ def rocks():
 def resume():
     return render_template("resume.html")
 
+@app.route("/CatTwitter", methods = ["POST","GET"])
+def Cat_Twitter():
+    if request.method == "POST":
+        user = request.form["nm"]
+        return redirect(url_for("user",usr = user))
+    else:
+        return render_template("Cat_Twitter.html")
+
+@app.route("/<usr>", methods=['GET', 'POST'])
+def user(usr):
+    username = usr
+    return render_template("CNN.html",cat_path = crawler.driver(username,consumer_key,consumer_secret,access_token,access_secret))
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0")
+    app.run(debug = True)
